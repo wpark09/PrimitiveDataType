@@ -26,5 +26,103 @@ namespace PrimitiveDataTypes
         {
             this.InitializeComponent();
         }
+
+        private void DataType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        ListBoxItem selectedType = (dataType.SelectedItem as ListBoxItem);
+            switch (selectedType.Content.ToString())
+            {
+                case "int":
+                    showIntValue();
+                    break;
+
+                case "long":
+                    showLongValue();
+                    break;
+
+                case "float":
+                    showFloatValue();
+                    break;
+
+                case "double":
+                    showDoubleValue();
+                    break;
+
+                case "decimal":
+                    showDecimalValue();
+                    break;
+
+                case "string":
+                    showStringValue();
+                    break;
+
+                case "char":
+                    showCharValue();
+                    break;
+
+                case "bool":
+                    showBoolValue();
+                    break;
+            }
+        }
+
+        private void showIntValue()
+        {
+            int intVar;
+            intVar = 42;
+            value.Text = intVar.ToString();
+        }
+
+        private void showLongValue()
+        {
+            long longVar;
+            longVar = 42L;
+            value.Text = longVar.ToString();
+        }
+
+        private void showFloatValue()
+        {
+            float floatVar;
+            floatVar = 0.42F;
+            value.Text = floatVar.ToString();
+        }
+
+        private void showDoubleValue()
+        {
+            double doubleVar;
+            doubleVar = 0.42;
+            value.Text = doubleVar.ToString();
+        }
+
+        private void showDecimalValue()
+        {
+            decimal decimalVar;
+            decimalVar = 0.42M;
+            value.Text = decimalVar.ToString();
+        }
+
+        private void showStringValue()
+        {
+            string stringVar;
+            stringVar = "Forty two";
+            value.Text = stringVar; 
+        }
+
+        private void showCharValue()
+        {
+            char charVar;
+            charVar = 'a';
+            value.Text = charVar.ToString();
+        }
+
+        private void showBoolValue()
+        {
+            bool boolVar;
+            boolVar = false;
+            value.Text = boolVar.ToString();
+        }
+
+       
     }
 }

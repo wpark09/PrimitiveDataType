@@ -9,6 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <TextBlock HorizontalAlignment="Center" Margin="0,113,0,0" Text="Primitive Data Types" TextWrapping="Wrap" VerticalAlignment="Top" Height="79" Width="471" FontSize="48" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="200,251,0,0" Text="Choose a data type" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="360" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1028,257,0,0" Text="Sample value" TextWrapping="Wrap" VerticalAlignment="Top" Height="43" Width="220" FontSize="24" FontFamily="Segoe UI"/>
+        <TextBox x:Name="value" HorizontalAlignment="Left" Margin="1028,380,0,0" Text="" VerticalAlignment="Top" Width="140" FontSize="24"/>
+        <ListBox x:Name="dataType" HorizontalAlignment="Left" Height="332" Margin="200,380,0,0" VerticalAlignment="Top" Width="255" SelectionChanged="DataType_SelectionChanged">
+            <ListBoxItem Height="40" Content="int"/>
+            <ListBoxItem Height="40" Content="long"/>
+            <ListBoxItem Height="40" Content="float"/>
+            <ListBoxItem Height="40" Content="double"/>
+            <ListBoxItem Height="40" Content="decimal"/>
+            <ListBoxItem Height="40" Content="string"/>
+            <ListBoxItem Height="40" Content="char"/>
+            <ListBoxItem Height="40" Content="bool"/>
+        </ListBox>
+        
     </Grid>
 </Page>
